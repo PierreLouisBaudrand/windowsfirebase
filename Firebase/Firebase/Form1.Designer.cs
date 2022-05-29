@@ -33,8 +33,6 @@ namespace Firebase
             this.label1 = new System.Windows.Forms.Label();
             this.insertbtn = new System.Windows.Forms.Button();
             this.selectbtn = new System.Windows.Forms.Button();
-            this.updatebtn = new System.Windows.Forms.Button();
-            this.deletebtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.usernamebox = new System.Windows.Forms.TextBox();
             this.displaymsgbox = new System.Windows.Forms.RichTextBox();
@@ -61,45 +59,24 @@ namespace Firebase
             // insertbtn
             // 
             this.insertbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertbtn.Location = new System.Drawing.Point(548, 415);
+            this.insertbtn.Location = new System.Drawing.Point(533, 383);
             this.insertbtn.Name = "insertbtn";
-            this.insertbtn.Size = new System.Drawing.Size(80, 29);
+            this.insertbtn.Size = new System.Drawing.Size(87, 26);
             this.insertbtn.TabIndex = 8;
-            this.insertbtn.Text = "INSERT";
+            this.insertbtn.Text = "POSTER";
             this.insertbtn.UseVisualStyleBackColor = true;
             this.insertbtn.Click += new System.EventHandler(this.insertbtn_Click);
             // 
             // selectbtn
             // 
             this.selectbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectbtn.Location = new System.Drawing.Point(234, 415);
+            this.selectbtn.Location = new System.Drawing.Point(368, 415);
             this.selectbtn.Name = "selectbtn";
             this.selectbtn.Size = new System.Drawing.Size(80, 29);
             this.selectbtn.TabIndex = 9;
             this.selectbtn.Text = "SELECT";
             this.selectbtn.UseVisualStyleBackColor = true;
             this.selectbtn.Click += new System.EventHandler(this.selectbtn_Click);
-            // 
-            // updatebtn
-            // 
-            this.updatebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatebtn.Location = new System.Drawing.Point(330, 415);
-            this.updatebtn.Name = "updatebtn";
-            this.updatebtn.Size = new System.Drawing.Size(88, 29);
-            this.updatebtn.TabIndex = 10;
-            this.updatebtn.Text = "UPDATE";
-            this.updatebtn.UseVisualStyleBackColor = true;
-            // 
-            // deletebtn
-            // 
-            this.deletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletebtn.Location = new System.Drawing.Point(439, 415);
-            this.deletebtn.Name = "deletebtn";
-            this.deletebtn.Size = new System.Drawing.Size(88, 29);
-            this.deletebtn.TabIndex = 11;
-            this.deletebtn.Text = "DELETE";
-            this.deletebtn.UseVisualStyleBackColor = true;
-            this.deletebtn.Click += new System.EventHandler(this.deletebtn_Click);
             // 
             // label2
             // 
@@ -123,7 +100,7 @@ namespace Firebase
             // 
             this.displaymsgbox.Location = new System.Drawing.Point(142, 44);
             this.displaymsgbox.Name = "displaymsgbox";
-            this.displaymsgbox.Size = new System.Drawing.Size(504, 301);
+            this.displaymsgbox.Size = new System.Drawing.Size(504, 333);
             this.displaymsgbox.TabIndex = 17;
             this.displaymsgbox.Text = "";
             // 
@@ -135,8 +112,6 @@ namespace Firebase
             this.Controls.Add(this.displaymsgbox);
             this.Controls.Add(this.usernamebox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.deletebtn);
-            this.Controls.Add(this.updatebtn);
             this.Controls.Add(this.selectbtn);
             this.Controls.Add(this.insertbtn);
             this.Controls.Add(this.label1);
@@ -155,8 +130,6 @@ namespace Firebase
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button insertbtn;
         private System.Windows.Forms.Button selectbtn;
-        private System.Windows.Forms.Button updatebtn;
-        private System.Windows.Forms.Button deletebtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox usernamebox;
         private System.Windows.Forms.RichTextBox displaymsgbox;
