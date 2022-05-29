@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Firebase
 {
-    class Message
+    class Messages
     {
         public string MessageTxt { get; set; }
         public string UserName { get; set; }
+        public string DateMsg { get; set; }
     }
 }

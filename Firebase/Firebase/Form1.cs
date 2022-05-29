@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Response;
 using FireSharp.Interfaces;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Firebase
 {
@@ -32,32 +34,41 @@ namespace Firebase
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void insertbtn_Click(object sender, EventArgs e)
         {
-            Message msg = new Message()
+            Messages msg = new Messages()
             {
                 MessageTxt = messagebox.Text,
-                UserName = usernamebox.Text
+                UserName = usernamebox.Text,
+                DateMsg = DateTime.Now.ToString("MM/dd/yyyy HH:mm"),
             };
 
-            var setter = fclient.Set("Messages/channel1/" + usernamebox.Text, msg);
+            var setter = fclient.Set("Messages/" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss").Replace('/','-'), msg);
         }
 
         private void selectbtn_Click(object sender, EventArgs e)
         {
-            var result = fclient.Get("Messages/channel1/" + usernamebox.Text);
-            Message msg = result.ResultAs<Message>();
-            themmessagebox.Text = msg.MessageTxt;
+            FirebaseResponse res = fclient.Get("Messages/");
+            Dictionary<string, Messages> data = JsonConvert.DeserializeObject<Dictionary<string, Messages>>(res.Body.ToString());
+            //Console.WriteLine(res.Body.ToString());
+            GetMsgToString(data);
         }
 
         private void deletebtn_Click(object sender, EventArgs e)
         {
             var setter = fclient.Delete("Messages/channel1/" + usernamebox.Text);
+        }
+
+        private void GetMsgToString(Dictionary<string, Messages> record)
+        {
+            displaymsgbox.Clear();
+            foreach (var item in record)
+            {
+                displaymsgbox.Text += item.Value.DateMsg + "    ";
+                displaymsgbox.Text += item.Value.UserName + " : ";
+                displaymsgbox.Text += item.Value.MessageTxt + " ";
+                displaymsgbox.Text += "\n";
+            }
         }
     }
 }
