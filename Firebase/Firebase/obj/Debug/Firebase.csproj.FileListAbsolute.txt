@@ -48,3 +48,11 @@ C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\obj\De
 C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\obj\Debug\Firebase.csproj.CopyComplete
 C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\obj\Debug\Firebase.exe
 C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\obj\Debug\Firebase.pdb
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\EntityFramework.dll
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\System.Data.SQLite.dll
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\EntityFramework.xml
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Spamm\OneDrive\Bureau\stage_PL\windowsfirebase\Firebase\Firebase\bin\Debug\System.Data.SQLite.xml
