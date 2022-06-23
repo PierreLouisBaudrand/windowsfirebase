@@ -45,7 +45,7 @@ namespace Firebase
             }
             InitializeComponent();
             GetUserFromFirebase();
-            //GetMsgToSQLite();
+            GetMsgToSQLite();
             GetMsgSQLiteToString();
             plan1();
         }
@@ -226,14 +226,7 @@ namespace Firebase
                 }
                 else
                 {
-                    Users user = new Users()
-                    {
-                        UserName = UsernametxtCon.Text,
-                        PassWord = PasswordtxtCon.Text
-                    };
-
-                    var setter = fclient.Set("User/" + UsernametxtCon.Text, user);
-                    MessageBox.Show("Utilisateur créé","Information");
+                    MessageBox.Show("Utilisateur inexistant", "Erreur");
                     PasswordtxtCon.Text = "";
                     UsernametxtCon.Text = "";
                 }
@@ -255,7 +248,14 @@ namespace Firebase
                 }
                 else
                 {
-                    MessageBox.Show("Utilisateur inexistant", "Erreur");
+                    Users user = new Users()
+                    {
+                        UserName = UsernametxtCon.Text,
+                        PassWord = PasswordtxtCon.Text
+                    };
+
+                    var setter = fclient.Set("Users/" + UsernametxtCon.Text, user);
+                    MessageBox.Show("Utilisateur créé", "Information");
                     PasswordtxtCon.Text = "";
                     UsernametxtCon.Text = "";
                 }
